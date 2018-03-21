@@ -6,38 +6,159 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <title>title</title>
-  <link rel="stylesheet" href="stylesheet.css" type="text/css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheet.css" type="text/css">
 </head>
 
 <body>
-  <img src="./images/progress_bar/step-02.png" class="img-responsive"/>
-  
-  <div class="container-fluid">
-    <h2>Help us determine if you are eligible for Guaranteed Issuance</h2>
-    <p><em>If you answer yes to any of the below you qualify for guaranteed issuance, and will be required to provide verification of guaranteed
-    issue to qualify.*</em></p>
-  </div>
+  <div class="container heading" id="zero">
+    <div id="main-title">
+      <h2>Help us determine if you are eligible for Guaranteed Issuance</h2>
+    </div>
+    <div>
+      <p id="subtitle"><em>If you answer yes to any of the below you qualify for guaranteed issuance, and will be required to provide verification of guaranteed
+      issue to qualify.*</em></p>
+    </div>
 
-  <div class="container-fluid">
-    <div class="btn-group btn-group-lg btn-group-toggle" data-toggle="buttons">
-      <label class="btn btn-success active">
-        <input type="radio" name="options" id="option1" autocomplete="off"> Yes
-      </label>
-      <label class="btn btn-danger">
-        <input type="radio" name="options" id="option2" autocomplete="off"> No
-      </label>
+    <div>
+      <a href="#one" class="btn btn-primary" role="button" id="begin-btn">
+        Begin
+      </a>
     </div>
   </div>
 
+  <div class="container forms" id="one">
+    <div class="form-title" id="personalForms-title">
+      <h4>Tell us a little about yourself</h4>
+      <small class="form-text text-muted">We'll never share this information with anyone.</small>
+    </div>
+    
+    <form class="personalForms">
+      <div class="forms-row">
+        <div>
+          <label for="firstName">First Name</label>
+          <input type="text" class="form-control" id="firstName" placeholder="John"> 
+        </div>
+        <div>
+          <label for="middleName">Middle Name</label>
+          <input type="text" class="form-control" id="middleName" placeholder="John">
+        </div>
+        <div>
+          <label for="lastName">Last Name</label>
+          <input type="text" class="form-control" id="last" placeholder="John">
+        </div>
+      </div>
+
+      <div class="forms-row">
+        <div>
+          <label for="phoneNumber">Phone:</label>
+          <input type="number" class="form-control" id="phoneNumber" placeholder="John">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="John">
+        </div>
+        <div>
+          <label for="zipCode">Zip</label>
+          <input type="number" class="form-control" id="zipCode" placeholder="John">
+        </div>
+      </div>
+      
+    </form>
+  </div>
+
+  <div class="container question" id="two">
+    <div>
+        Do you have an employer group health plan that pays after Medicare that is ending?
+    </div>
+    <div class="btn-group-toggle btn-group-lg" data-toggle="buttons">
+      <a href="#three" class="button-wrapper">
+        <label class="btn btn-success">
+          <input type="radio" name="options" id="option1" autocomplete="off"> 
+          <img src="https://openclipart.org/download/257462/Checkmark.svg" class="image-radio" />
+        </label>
+      </a>
+      <a href="#three" class="button-wrapper">
+        <label class="btn btn-danger">
+          <input type="radio" name="options" id="option2" autocomplete="off">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Red_X.svg" class="image-radio" />
+        </label>
+      </a>
+    </div>
+  </div>
+
+  <div class="container-fluid question" id="three">
+    <div>
+        Do you have a Medicare Select policy and have moved out of the Medicare Select plans service area?
+    </div>
+    <div class="btn-group-toggle btn-group-lg" data-toggle="buttons">
+      <a href="#four">
+        <label class="btn btn-success">
+          <input type="radio" name="options" id="option1" autocomplete="off">
+          <img src="https://openclipart.org/download/257462/Checkmark.svg" class="image-radio" />
+        </label>
+      </a>
+      <a href="#four">
+        <label class="btn btn-danger">
+          <input type="radio" name="options" id="option2" autocomplete="off">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Red_X.svg" class="image-radio" />
+        </label>
+      </a>
+    </div>
+  </div>
+
+<div class="container-fluid question" id="four">
+  <div>
+    Has your Medigap insurance company gone bankrupt and you lost coverage, or has the company substantially violated a material provision of the policy or materially misrepresented a policy provision, or has your Medigap policy ended through no fault of your own?
+  </div>
+  <div class="btn-group-toggle btn-group-lg" data-toggle="buttons">
+    <a href="#five">
+      <label class="btn btn-success">
+        <input type="radio" name="options" id="option1" autocomplete="off">
+        <img src="https://openclipart.org/download/257462/Checkmark.svg" class="image-radio" />
+      </label>
+    </a>
+    <a href="#five">
+      <label class="btn btn-danger">
+        <input type="radio" name="options" id="option2" autocomplete="off">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Red_X.svg" class="image-radio" />
+      </label>
+    </a>
+  </div>
+</div>
+
+<div class="container question" id="five">
+  <div>
+    Are you currently enrolled in a Medicare Advantage program?
+  </div>
+  <div class="btn-group-toggle btn-group-lg" data-toggle="buttons">
+    <a href="#end">
+      <label class="btn btn-success">
+        <input type="radio" name="options" id="option1" autocomplete="off">
+        <img src="https://openclipart.org/download/257462/Checkmark.svg" class="image-radio" />
+      </label>
+    </a>
+    <a href="#end">
+      <label class="btn btn-danger">
+        <input type="radio" name="options" id="option2" autocomplete="off">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Red_X.svg" class="image-radio" />
+      </label>
+    </a>
+  </div>
+</div>
+
+
+
  
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-  crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
   crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script src="tween.js"></script>
 </body>
 
 </html>
