@@ -1,28 +1,41 @@
 body {
-  background: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
   color: #222;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 4000px;
+  /* overflow: hidden; */
+  background: url("https://images.pexels.com/photos/56875/tree-dawn-nature-bucovina-56875.jpeg?auto=compress&cs=tinysrgb&h=350") no-repeat center center fixed;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+   
 }
+
+.scrollbar-hider {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 20px;
+}
+
 
 .img-responsive {
   height: 100px;
 }
 
-.heading,
+.intro,
 .forms,
 .question {
+  display: none;
   padding: 20px;
-  margin: 20px;
-  background-color: #f8f8f8;
-  box-shadow: 2px 0 2px #ddd;
+  margin: 400px 20px;
+  background-color: #f8f8f8dd;
+  box-shadow: 2px 2px 2px #ddd;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  display: none;
+  justify-content: space-around;
   opacity: 0;
 }
 
@@ -33,7 +46,15 @@ body {
   text-align: center;
 }
 
-.personalForms {
+.form-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  text-align: center;
+  opacity: 0;
+}
+
+.form-group {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -43,19 +64,58 @@ body {
 
 .forms-row {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   margin: 10px;
+  flex-wrap: wrap;
 }
 
-.form-title {
-  margin-bottom: 20px;
-  text-align: center;
+.buttons-row {
+  display: flex;
+  justify-content: flex-end;
 }
+
+.buttons-row > a {
+  margin: 4px 10px ;
+}
+
+.forms-row > div {
+  flex: 0.3;
+}
+
+.question {
+  padding: 75px;
+}
+
+.question-text {
+  margin: 40px;
+}
+
+.question-buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: azure;
+}
+
+.yn-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellowgreen;
+  flex: 0.7;
+}
+
+
 
 .image-radio {
-  width: 100px;
-  height: 100px
+  width: 50px;
+  height: 50px
+}
+
+#pq-forms,
+#mq-forms {
+  opacity: 0;
 }
 
 label.btn > input {
@@ -65,8 +125,15 @@ label.btn > input {
 
 
 /* Dev */
-/* #one {
+
+.intro,
+#main-title,
+#subtitle,
+#begin-btn,
+#pq, #pq-title, #pq-forms,
+#mq, #mq-title, #mq-forms,
+.question {
   display: flex;
   opacity: 1;
-} */
+}
 
