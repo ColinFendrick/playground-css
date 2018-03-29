@@ -5,6 +5,12 @@ $(document).ready(function() {
     mq: new TimelineLite
   }
 
+  
+
+  __prevent_key([['myinput', true]])
+  
+  return
+
   //Stuff on initial loading
   $('.intro').css({ "display": "flex" });
   timelines.title.to("html, body", 0.75, { scrollTop: 200 })
@@ -28,21 +34,20 @@ $(document).ready(function() {
         event.preventDefault();
         $(target).css({ "display": "flex" })
         
-        // Animating the fade-ins for each element
-        const id = target[0].id
-        if (id === 'pq' || id === 'mq') {
-          timelines[id].to(`#${id}, #${id}-title`, 1.5, { opacity: 1 })
-          .to(`#${id}-forms`, 1.5, { opacity: 1 })
-        } else {
-          TweenLite.to((target), 2, { opacity: 1 });
-        }
-        console.log(target, $(target))
+        // // Animating the fade-ins for each element
+        // const id = target[0].id
+        // if (id === 'pq' || id === 'mq') {
+        //   timelines[id].to(`#${id}, #${id}-title`, 1.5, { opacity: 1 })
+        //   .to(`#${id}-forms`, 1.5, { opacity: 1 })
+        // } else {
+        //   TweenLite.to((target), 2, { opacity: 1 });
+        // }
+        // console.log(target, $(target))
 
         // Scrolls to the element & focuses it
         TweenLite.to($('html, body'), 1.5, {
           scrollTop: target.offset().top - 200,
           onComplete: function() {
-            console
             $(target).focus();
             if (target.is(":focus")) {
               return false;
@@ -56,3 +61,4 @@ $(document).ready(function() {
     }
   });
 });
+
